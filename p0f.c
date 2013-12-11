@@ -1075,7 +1075,7 @@ continue_fuzzy:
       if (fuzzy_now) printf("[FUZZY] ");
 
       if (p->no_detail) printf("* "); else
-        if (tstamp) printf("(up: %d hrs) ",tstamp/360000);
+        if (tstamp) printf("(ts: %d) ",tstamp);
 
       if (always_sig || (p->generic && !no_unknown)) {
 
@@ -1221,7 +1221,7 @@ continue_search:
       if (tos_desc) printf("[%s] ",tos_desc); else printf("[tos %d] ",tos);
     }
 
-    if (tstamp) printf("(up: %d hrs) ",tstamp/360000);
+    if (tstamp) printf("(ts: %d) ",tstamp);
 
     if (!no_extra) {
       a=(_u8*)&dst;
